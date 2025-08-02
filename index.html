@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wheniamonly19 Brand Deck</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #0A0A0A;
+            background: #F5F5F5;
+        }
+
+        .deck-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+
+        .slide {
+            min-height: 100vh;
+            padding: 60px 80px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            page-break-after: always;
+            position: relative;
+        }
+
+        .slide-number {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            color: #666;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .bilingual-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        .lang-section {
+            padding: 1rem;
+        }
+
+        .lang-label {
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #666;
+            margin-bottom: 0.5rem;
+        }
+
+        .en-section { border-left: 3px solid #FF0033; }
+        .vi-section { border-left: 3px solid #9EFD38; }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            color: #0A0A0A;
+            text-align: center;
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            color: #0A0A0A;
+        }
+
+        h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+            color: #FF0033;
+        }
+
+        .tagline {
+            font-size: 1.5rem;
+            font-weight: 300;
+            color: #666;
+            font-style: italic;
+            margin-top: 1rem;
+            text-align: center;
+        }
+
+        .brand-essence {
+            font-size: 1.3rem;
+            font-weight: 400;
+            line-height: 1.8;
+            color: #333;
+            margin-bottom: 2rem;
+        }
+
+        .highlight {
+            background: linear-gradient(120deg, #9EFD38 0%, #9EFD38 100%);
+            background-repeat: no-repeat;
+            background-size: 100% 0.3em;
+            background-position: 0 88%;
+            font-weight: 600;
+        }
+
+        .accent-red { color: #FF0033; }
+        .accent-green { color: #9EFD38; }
+
+        .story-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            color: #444;
+        }
+
+        .quote {
+            font-size: 1.4rem;
+            font-weight: 500;
+            color: #FF0033;
+            font-style: italic;
+            text-align: center;
+            margin: 2rem 0;
+            padding: 1rem;
+            border-left: 4px solid #9EFD38;
+            background: rgba(158, 253, 56, 0.05);
+        }
+
+        .mission-vision {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin: 2rem 0;
+        }
+
+        .mission-box, .vision-box {
+            padding: 2rem;
+            border-radius: 8px;
+            border: 2px solid #F5F5F5;
+        }
+
+        .mission-box {
+            background: rgba(255, 0, 51, 0.05);
+            border-color: #FF0033;
+        }
+
+        .vision-box {
+            background: rgba(158, 253, 56, 0.05);
+            border-color: #9EFD38;
+        }
+
+        .persona-card {
+            background: #F8F8F8;
+            padding: 2rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+            border-left: 6px solid #9EFD38;
+        }
+
+        .psychographics {
+            margin: 2rem 0;
+        }
+
+        .psychographics ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .psychographics li {
+            padding: 0.8rem 0;
+            padding-left: 2rem;
+            position: relative;
+            font-size: 1.05rem;
+        }
+
+        .psychographics li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #FF0033;
+            font-weight: bold;
+        }
+
+        .color-palette {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .color-swatch {
+            text-align: center;
+            padding: 1rem;
+            border-radius: 8px;
+        }
+
+        .color-swatch.red { background: #FF0033; color: white; }
+        .color-swatch.green { background: #9EFD38; color: #0A0A0A; }
+        .color-swatch.black { background: #0A0A0A; color: white; }
+        .color-swatch.white { background: #F5F5F5; color: #0A0A0A; border: 1px solid #ddd; }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .product-card {
+            background: #F8F8F8;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .product-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #FF0033;
+            margin-bottom: 1rem;
+        }
+
+        .competitive-matrix {
+            margin: 2rem 0;
+            text-align: center;
+            font-style: italic;
+            color: #666;
+        }
+
+        .tagline-list {
+            background: #F8F8F8;
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+
+        .tagline-list ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .tagline-list li {
+            font-size: 1.1rem;
+            padding: 0.8rem 0;
+            font-style: italic;
+            color: #333;
+        }
+
+        .final-message {
+            background: linear-gradient(135deg, #FF0033, #9EFD38);
+            color: white;
+            padding: 3rem;
+            border-radius: 12px;
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .final-message h3 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .single-column {
+            grid-column: 1 / -1;
+        }
+
+        @media print {
+            body { background: white; }
+            .slide { page-break-after: always; }
+        }
+
+        @media (max-width: 768px) {
+            .slide { padding: 40px 40px; }
+            h1 { font-size: 3rem; }
+            h2 { font-size: 2rem; }
+            .bilingual-section { grid-template-columns: 1fr; gap: 1.5rem; }
+            .mission-vision { grid-template-columns: 1fr; }
+            .color-palette { grid-template-columns: repeat(2, 1fr); }
+            .product-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="deck-container">
+        
+        <!-- Slide 1: Title -->
+        <div class="slide">
+            <div class="slide-number">01</div>
+            <div style="text-align: center;">
+                <h1>Wheniamonly19</h1>
+                <p class="tagline">Mistaken for age. <span class="highlight">Recognized by soul.</span></p>
+                <p class="tagline" style="font-size: 1.2rem; margin-top: 0.5rem;">Nhầm lẫn về tuổi tác. <span class="highlight">Được nhận ra bởi tâm hồn.</span></p>
+            </div>
+        </div>
+
+        <!-- Slide 2: Brand Essence -->
+        <div class="slide">
+            <div class="slide-number">02</div>
+            <h2>Brand Essence / Bản Chất Thương Hiệu</h2>
+            <div class="bilingual-section">
+                <div class="lang-section en-section">
+                    <div class="lang-label">English</div>
+                    <p class="brand-essence">A voice for the youth whose presence feels older than their age — <span class="accent-red">Wheniamonly19</span> is the uniform of misunderstood maturity.</p>
+                    <p class="brand-essence">It's a declaration for those who carry themselves with a depth that confuses others, and a bold, vibrant reminder: <span class="highlight">"I am only 19."</span></p>
+                </div>
+                <div class="lang-section vi-section">
+                    <div class="lang-label">Tiếng Việt</div>
+                    <p class="brand-essence">Một tiếng nói dành cho thế hệ trẻ có sự hiện diện già dặn hơn tuổi của họ — <span class="accent-red">Wheniamonly19</span> là đồng phục của sự trưởng thành bị hiểu lầm.</p>
+                    <p class="brand-essence">Đó là một tuyên bố dành cho những người mang trong mình chiều sâu làm người khác bối rối, và một lời nhắc nhở táo bạo, rực rỡ: <span class="highlight">"Tôi chỉ mới 19 tuổi."</span></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3: Brand Story -->
+        <div class="slide">
+            <div class="slide-number">03</div>
+            <h2>Brand Story / Câu Chuyện Thương Hiệu</h2>
+            <div class="bilingual-section">
+                <div class="lang-section en-section">
+                    <div class="lang-label">English</div>
+                    <p class="story-text">I was once just a kid, running around with a flair for outfits that made me feel alive — a hoodie that felt like armor, pants that sparked curiosity. Fashion was never just about style; it was how I declared my identity.</p>
+                    <p class="story-text">I was always the youngest in the room, learning from adults, talking like them, thinking like them. It shaped how people saw me — not as a teenager, but as someone much older. I'd get that look, followed by the question, "How old are you?" And my answer would always be:</p>
+                    <div class="quote">"I'm only 19."</div>
+                </div>
+                <div class="lang-section vi-section">
+                    <div class="lang-label">Tiếng Việt</div>
+                    <p class="story-text">Tôi từng chỉ là một đứa trẻ, chạy nhảy khắp nơi với niềm đam mê những bộ trang phục khiến tôi cảm thấy tràn đầy sức sống — một chiếc áo hoodie như áo giáp, những chiếc quần kích thích sự tò mò. Thời trang không bao giờ chỉ là về phong cách; đó là cách tôi tuyên bố bản sắc của mình.</p>
+                    <p class="story-text">Tôi luôn là người trẻ nhất trong phòng, học hỏi từ người lớn, nói chuyện như họ, suy nghĩ như họ. Điều đó định hình cách mọi người nhìn nhận tôi — không phải như một thiếu niên, mà như ai đó lớn tuổi hơn nhiều. Tôi sẽ nhận được cái nhìn đó, tiếp theo là câu hỏi, "Bạn bao nhiêu tuổi?" Và câu trả lời của tôi luôn là:</p>
+                    <div class="quote">"Tôi chỉ mới 19 tuổi."</div>
+                </div>
+            </div>
+            <div class="single-column" style="margin-top: 2rem;">
+                <div class="bilingual-section">
+                    <div class="lang-section en-section">
+                        <p class="story-text">This brand is for people like me — youth wrapped in wisdom, misunderstood not by their clothes, but by how confidently they wear them.</p>
+                    </div>
+                    <div class="lang-section vi-section">
+                        <p class="story-text">Thương hiệu này dành cho những người như tôi — tuổi trẻ bao bọc trong trí tuệ, bị hiểu lầm không phải bởi trang phục của họ, mà bởi cách họ tự tin khoác lên mình.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 4: Mission & Vision -->
+        <div class="slide">
+            <div class="slide-number">04</div>
+            <h2>Our Mission & Vision / Sứ Mệnh & Tầm Nhìn</h2>
+            <div class="mission-vision">
+                <div class="mission-box">
+                    <h3>Mission Statement / Tuyên Bố Sứ Mệnh</h3>
+                    <p><strong>EN:</strong> To empower misunderstood youth with expressive apparel that validates their inner depth and maturity.</p>
+                    <p style="margin-top: 1rem;"><strong>VI:</strong> Trao quyền cho những bạn trẻ bị hiểu lầm bằng trang phục biểu cảm xác nhận chiều sâu nội tâm và sự trưởng thành của họ.</p>
+                </div>
+                <div class="vision-box">
+                    <h3>Vision Statement / Tuyên Bố Tầm Nhìn</h3>
+                    <p><strong>EN:</strong> To foster a world where identity transcends age, and authentic self-expression is the only label that matters.</p>
+                    <p style="margin-top: 1rem;"><strong>VI:</strong> Nuôi dưỡng một thế giới nơi bản sắc vượt qua tuổi tác, và việc thể hiện bản thân chân thực là nhãn hiệu duy nhất quan trọng.</p>
+                </div>
+            </div>
+            <div class="quote">
+                <div>"Don't let the world mistake your age for your identity."</div>
+                <div style="margin-top: 0.5rem; font-size: 1.2rem;">"Đừng để thế giới nhầm lẫn tuổi tác của bạn với bản sắc của bạn."</div>
+            </div>
+        </div>
+
+        <!-- Slide 5: Target Audience -->
+        <div class="slide">
+            <div class="slide-number">05</div>
+            <h2>Target Audience: "The Old Soul" / Đối Tượng Mục Tiêu: "Tâm Hồn Già Dặn"</h2>
+            <div class="bilingual-section">
+                <div class="lang-section en-section">
+                    <div class="lang-label">English</div>
+                    <p class="brand-essence">We design for a specific mindset, not just a demographic.</p>
+                </div>
+                <div class="lang-section vi-section">
+                    <div class="lang-label">Tiếng Việt</div>
+                    <p class="brand-essence">Chúng tôi thiết kế cho một tư duy cụ thể, không chỉ một nhóm nhân khẩu học.</p>
+                </div>
+            </div>
+            
+            <div class="psychographics">
+                <h3>Psychographics / Đặc Điểm Tâm Lý:</h3>
+                <div class="bilingual-section">
+                    <div class="lang-section en-section">
+                        <ul>
+                            <li>Feels like the "youngest person in the adult's room" and the "oldest person in the kid's room."</li>
+                            <li>Naturally introspective, observant, and empathetic.</li>
+                            <li>Values deep conversation over small talk.</li>
+                            <li>Uses fashion as a form of non-verbal communication and self-declaration.</li>
+                            <li>Tired of hearing, "You're so mature for your age."</li>
+                        </ul>
+                    </div>
+                    <div class="lang-section vi-section">
+                        <ul>
+                            <li>Cảm thấy như "người trẻ nhất trong phòng người lớn" và "người già nhất trong phòng trẻ con."</li>
+                            <li>Tự nhiên hướng nội, quan sát và đồng cảm.</li>
+                            <li>Coi trọng cuộc trò chuyện sâu sắc hơn những câu chuyện phiếm.</li>
+                            <li>Sử dụng thời trang như một hình thức giao tiếp phi ngôn ngữ và tự tuyên bố.</li>
+                            <li>Mệt mỏi khi nghe "Bạn trưởng thành quá so với tuổi."</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="persona-card">
+                <h3>Persona: "Alex, 19"</h3>
+                <div class="bilingual-section">
+                    <div class="lang-section en-section">
+                        <p><strong>Demographics:</strong> 16-25, lives in a creative urban or suburban hub.</p>
+                        <p><strong>Interests:</strong> Indie film (A24), lo-fi or conscious music, poetry, art galleries, vintage shopping.</p>
+                        <p><strong>Pain Point:</strong> Struggles to find clothing that reflects their dual nature: the energy of youth and the composure of wisdom.</p>
+                        <p><strong>Brands they Follow:</strong> Aimé Leon Dore, Madhappy, Brain Dead, Ganni.</p>
+                    </div>
+                    <div class="lang-section vi-section">
+                        <p><strong>Nhân khẩu học:</strong> 16-25 tuổi, sống ở trung tâm đô thị hoặc ngoại ô sáng tạo.</p>
+                        <p><strong>Sở thích:</strong> Phim độc lập (A24), nhạc lo-fi hoặc có ý thức, thơ ca, phòng trưng bày nghệ thuật, mua sắm vintage.</p>
+                        <p><strong>Điểm đau:</strong> Khó tìm quần áo phản ánh bản chất kép: năng lượng của tuổi trẻ và bình tĩnh của trí tuệ.</p>
+                        <p><strong>Thương hiệu họ theo dõi:</strong> Aimé Leon Dore, Madhappy, Brain Dead, Ganni.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 6: UVP -->
+        <div class="slide">
+            <div class="slide-number">06</div>
+            <h2>Unique Value Proposition / Đề Xuất Giá Trị Độc Đáo</h2>
+            <div class="bilingual-section">
+                <div class="lang-section en-section">
+                    <div class="lang-label">English</div>
+                    <p class="brand-essence"><span class="accent-red">Wheniamonly19</span> is the only streetwear brand that directly addresses the "old soul" archetype in youth.</p>
+                </div>
+                <div class="lang-section vi-section">
+                    <div class="lang-label">Tiếng Việt</div>
+                    <p class="brand-essence"><span class="accent-red">Wheniamonly19</span> là thương hiệu streetwear duy nhất trực tiếp hướng đến nguyên mẫu "tâm hồn già dặn" trong giới trẻ.</p>
+                </div>
+            </div>
+            
+            <div class="psychographics">
+                <h3>We accomplish this by uniquely combining / Chúng tôi thực hiện điều này bằng cách kết hợp độc đáo:</h3>
+                <div class="bilingual-section">
+                    <div class="lang-section en-section">
+                        <ul>
+                            <li><strong>Nuanced Silhouettes:</strong> Fusing youthful streetwear energy with deliberately mature tailoring.</li>
+                            <li><strong>A Declarative Message:</strong> Giving a name and a voice to the feeling of being misunderstood.</li>
+                            <li><strong>Packaging as Wearable Art:</strong> Extending the fashion statement beyond the unboxing, making every piece an experience.</li>
+                        </ul>
+                    </div>
+                    <div class="lang-section vi-section">
+                        <ul>
+                            <li><strong>Silhouette Tinh Tế:</strong> Kết hợp năng lượng streetwear trẻ trung với cách cắt may trưởng thành có chủ ý.</li>
+                            <li><strong>Thông Điệp Tuyên Bố:</strong> Đặt tên và tạo tiếng nói cho cảm giác bị hiểu lầm.</li>
+                            <li><strong>Bao Bì Như Nghệ Thuật Mặc Được:</strong> Mở rộng tuyên bố thời trang ra ngoài việc mở hộp, biến mỗi sản phẩm thành một trải nghiệm.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 7: Competitive Landscape -->
+        <div class="slide">
+            <div class="slide-number">07</div>
+            <h2>Competitive Landscape / Bối Cảnh Cạnh Tranh</h2>
+            <div class="bilingual-section">
+                <div class="lang-section en-section">
+                    <div class="lang-label">English</div>
+                    <p class="brand-essence">While other brands touch on youth or sophistication, none live at the intersection of expressive maturity where we do.</p>
+                </div>
+                <div class="lang-section vi-section">
+                    <div class="lang-label">Tiếng Việt</div>
+                    <p class="brand-essence">Trong khi các thương hiệu khác chạm đến tuổi trẻ hoặc sự tinh tế, không ai sống ở ngã tư của sự trưởng thành biểu cảm như chúng tôi.</p>
+                </div>
+            </div>
+            
+            <div class="competitive-matrix">
+                <p><em>2x2 Matrix Positioning / Định Vị Ma Trận 2x2:</em></p>
+                <p><strong>Y-Axis:</strong> Youthful/Playful ↔ Mature/Sophisticated / Trẻ Trung/Vui Tươi ↔ Trưởng Thành/Tinh Tế</p>
+                <p><strong>X-Axis:</strong> Minimalist ↔ Expressive / Tối Giản ↔ Biểu Cảm</p>
+                <br>
+                <p><strong>Bottom-Left (Minimalist / Youthful):</strong> Uniqlo, Everlane</p>
+                <p><strong>Bottom-Right (Expressive / Youthful):</strong> Supreme, Palace, Brain Dead</p>
+                <p><strong>Top-Left (Minimalist / Mature):</strong> The Row, COS</p>
+                <p><strong>Top-Right (Expressive / Mature):</strong> <span class="accent-red">WHENIAMONLY19</span>, Aimé Leon Dore, Jacquemus</p>
+            </div>
+            
+            <div class="quote">
+                <div>"We own the space that speaks to the young person with a sophisticated, expressive inner world."</div>
+                <div style="margin-top: 0.5rem; font-size: 1.2rem;">"Chúng tôi sở hữu không gian nói chuyện với người trẻ có thế giới nội tâm tinh tế, biểu cảm."</div>
+            </div>
+        </div>
+
+        <!-- Slide 8: Product Vision -->
+        <div class="slide">
+            <div class="slide-number">08</div>
+            <h2>The Product Vision / Tầm Nhìn Sản Phẩm</h2>
+            <div class="bilingual-section">
+                <div class="lang-section en-section">
+                    <div class="lang-label">English</div>
+                    <p class="brand-essence">Clothes aren't just stitched fabric. They're your misunderstood thoughts, your early wisdom, your non-verbal reply to being mislabeled.</p>
+                </div>
+                <div class="lang-section vi-section">
+                    <div class="lang-label">Tiếng Việt</div>
+                    <p class="brand-essence">Quần áo không chỉ là vải khâu. Chúng là những suy nghĩ bị hiểu lầm, trí tuệ sớm, câu trả lời phi ngôn ngữ cho việc bị dán nhãn sai.</p>
+                </div>
+            </div>
+
+            <h3>Launch Collection Concept / Khái Niệm Bộ Sưu Tập Ra Mắt:</h3>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-name">The "Misunderstood" Hoodie<br/>Áo Hoodie "Bị Hiểu Lầm"</div>
+                    <p><strong>EN:</strong> A heavyweight, jet-black hoodie with a structured, tailored fit and a subtle embroidered detail on the cuff: "est. whenever I felt like it."</p>
+                    <p><strong>VI:</strong> Áo hoodie đen tuyền, nặng với form dáng có cấu trúc, may khít và chi tiết thêu tinh tế trên cổ tay: "est. whenever I felt like it."</p>
+                </div>
+                <div class="product-card">
+                    <div class="product-name">The "Declarative" Tee<br/>Áo Thun "Tuyên Bố"</div>
+                    <p><strong>EN:</strong> An acid-green premium tee with a clean, centered typographic hit: "I'm only 19."</p>
+                    <p><strong>VI:</strong> Áo thun cao cấp màu xanh chua với typography sạch sẽ, căn giữa: "I'm only 19."</p>
+                </div>
+                <div class="product-card">
+                    <div class="product-name">The "Confidence" Trousers<br/>Quần "Tự Tin"</div>
+                    <p><strong>EN:</strong> A pleated, wide-leg trouser cut from streetwear-durable twill.</p>
+                    <p><strong>VI:</strong> Quần ống rộng, có ly cắt từ vải twill bền chắc kiểu streetwear.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 9: Visual Identity -->
+        <div class="slide">
+            <div class="slide-number">09</div>
+            <h2>Visual Identity / Bản Sắc Thị Giác</h2>
+            <div class="bilingual-section">
+                <div class="lang-section en-section">
+                    <div class="lang-label">English</div>
+                    <p class="brand-essence">Our visuals represent the core contradiction: mature clarity meets youthful rebellion.</p>
+                </div>
+                <div class="lang-section vi-section">
+                    <div class="lang-label">Tiếng Việt</div>
+                    <p class="brand-essence">Hình ảnh của chúng tôi thể hiện sự mâu thuẫn cốt lõi: sự rõ ràng trưởng thành gặp gỡ sự nổi loạn trẻ trung.</p>
+                </div>
+            </div>
+            
+            <h3>Colors: A palette of bold, unapologetic tones / Màu Sắc: Bảng màu táo bạo, không xin lỗi</h3>
+            <div class="color-palette">
+                <div class="color-swatch red">
+                    <strong>Electric Red</strong><br>
+                    Đỏ Điện<br>
+                    #FF0033
+                </div>
+                <div class="color-swatch green">
+                    <strong>Acid Green</strong><br>
+                    Xanh Chua<br>
+                    #9EFD38
+                </div>
+                <div class="color-swatch black">
+                    <strong>Jet Black</strong><br>
+                    Đen Tuyền<br>
+                    #0A0A0A
+                </div>
+                <div class="color-swatch white">
+                    <strong>Clarity White</strong><br>
+                    Trắng Rõ Ràng<br>
+                    #F5F5F5
+                </div>
+            </div>
+
+            <div style="margin-top: 2rem;">
+                <div class="bilingual-section">
+                    <div class="lang-section en-section">
+                        <h3>Typography: A mix symbolizing the blend of raw youth and clear thought</h3>
+                        <p><strong>Headers (The Soul):</strong> A modern, elegant serif (e.g., Playfair Display)</p>
+                        <p><strong>Body (The Voice):</strong> A clean, direct sans-serif (e.g., Inter)</p>
+                        
+                        <h3 style="margin-top: 2rem;">Photography & Packaging</h3>
+                        <p><strong>Packaging:</strong> Vividly printed, reusable bags, wraps, and wearable pouches. Every package becomes part of the fashion story.</p>
+                        <p><strong>Photography:</strong> High-contrast, candid shots in urban environments. Models are thoughtful, confident, and engaged with their surroundings, not just posing.</p>
+                    </div>
+                    <div class="lang-section vi-section">
+                        <h3>Typography: Sự pha trộn tượng trưng cho sự kết hợp giữa tuổi trẻ thô sơ và tư duy rõ ràng</h3>
+                        <p><strong>Tiêu đề (Tâm Hồn):</strong> Serif hiện đại, thanh lịch (ví dụ: Playfair Display)</p>
+                        <p><strong>Nội dung (Tiếng Nói):</strong> Sans-serif sạch sẽ, trực tiếp (ví dụ: Inter)</p>
+                        
+                        <h3 style="margin-top: 2rem;">Nhiếp Ảnh & Bao Bì</h3>
+                        <p><strong>Bao bì:</strong> Túi, gói và túi đeo có thể tái sử dụng được in rực rỡ. Mỗi gói hàng trở thành một phần của câu chuyện thời trang.</p>
+                        <p><strong>Nhiếp ảnh:</strong> Những bức ảnh tương phản cao, tự nhiên trong môi trường đô thị. Người mẫu chu đáo, tự tin và tương tác với môi trường xung quanh, không chỉ tạo dáng.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 10: Marketing Strategy -->
+        <div class="slide">
+            <div class="slide-number">10</div>
+            <h2>Marketing Strategy & Ad Concepts / Chiến Lược Marketing & Ý Tưởng Quảng Cáo</h2>
+            <div class="bilingual-section">
+                <div class="lang-section en-section">
+                    <div class="lang-label">English</div>
+                    <p class="brand-essence">Our strategy is built on storytelling and validation.</p>
+                </div>
+                <div class="lang-section vi-section">
+                    <div class="lang-label">Tiếng Việt</div>
+                    <p class="brand-essence">Chiến lược của chúng tôi được xây dựng trên việc kể chuyện và xác nhận.</p>
+                </div>
+            </div>
+            
+            <div class="bilingual-section">
+                <div class="lang-section en-section">
+                    <h3>Ad-Centric Campaigns</h3>
+                    <p><strong>Facebook/Instagram Ads:</strong> Highlighting "Before you judge my age..." narratives.</p>
+                    <p><strong>Video Reels:</strong> Show transformations: a quiet kid in their room puts on WIO19 clothing and moves through the world with a new, confident presence, ending with the reveal: "I'm only 19."</p>
+                </div>
+                <div class="lang-section vi-section">
+                    <h3>Chiến Dịch Tập Trung Quảng Cáo</h3>
+                    <p><strong>Quảng cáo Facebook/Instagram:</strong> Làm nổi bật câu chuyện "Trước khi bạn phán xét tuổi tác của tôi..."</p>
+                    <p><strong>Video Reels:</strong> Thể hiện sự chuyển đổi: một đứa trẻ yên lặng trong phòng mặc quần áo WIO19 và di chuyển trong thế giới với sự hiện diện tự tin mới, kết thúc bằng việc tiết lộ: "Tôi chỉ mới 19 tuổi."</p>
+                </div>
+            </div>
+
+            <div class="tagline-list">
+                <h3>Tagline Ideas for Ads / Ý Tưởng Slogan Cho Quảng Cáo:</h3>
+                <div class="bilingual-section">
+                    <div class="lang-section en-section">
+                        <ul>
+                            <li>"They thought I was 30. I was just wearing confidence."</li>
+                            <li>"Misunderstood by design."</li>
+                            <li>"Age is seen. Identity is worn."</li>
+                        </ul>
+                    </div>
+                    <div class="lang-section vi-section">
+                        <ul>
+                            <li>"Họ nghĩ tôi 30 tuổi. Tôi chỉ đang mặc sự tự tin."</li>
+                            <li>"Bị hiểu lầm bởi thiết kế."</li>
+                            <li>"Tuổi tác được nhìn thấy. Bản sắc được mặc."</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bilingual-section">
+                <div class="lang-section en-section">
+                    <h3>Packaging as Style</h3>
+                    <p>Launch campaigns like "Style doesn't stop at the unboxing." Feature customers repurposing their vividly printed bags as totes, accessories, or art.</p>
+
+                    <h3>User-Generated Stories</h3>
+                    <p>A dedicated campaign (<strong>#RecognizedBySoul</strong>) for customers to share moments they were mistaken for older — and what they wore to own their truth.</p>
+                </div>
+                <div class="lang-section vi-section">
+                    <h3>Bao Bì Như Phong Cách</h3>
+                    <p>Khởi chạy chiến dịch như "Phong cách không dừng lại ở việc mở hộp." Giới thiệu khách hàng tái sử dụng túi in rực rỡ của họ như túi xách tay, phụ kiện hoặc nghệ thuật.</p>
+
+                    <h3>Câu Chuyện Do Người Dùng Tạo</h3>
+                    <p>Một chiến dịch chuyên biệt (<strong>#RecognizedBySoul</strong>) để khách hàng chia sẻ những khoảnh khắc họ bị nhầm lẫn là lớn tuổi hơn — và những gì họ mặc để sở hữu sự thật của mình.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 11: The Empathetic Hook -->
+        <div class="slide">
+            <div class="slide-number">11</div>
+            <h2>The Empathetic Hook / Điểm Kết Nối Đồng Cảm</h2>
+            
+            <div class="final-message">
+                <div class="bilingual-section" style="color: white;">
+                    <div class="lang-section" style="border: none;">
+                        <h3 style="color: white;">This brand is not about pretending to be older.</h3>
+                        <p style="font-size: 1.2rem; margin-bottom: 1.5rem;">It's about being exactly who you are — complex, deep, expressive — and letting your style say it first.</p>
+                        <p style="font-size: 1.1rem;">For every person who's been misunderstood because they were wise too soon or bold too young — this is your brand.</p>
+                    </div>
+                    <div class="lang-section" style="border: none; margin-top: 2rem;">
+                        <h3 style="color: white;">Thương hiệu này không phải về việc giả vờ già hơn.</h3>
+                        <p style="font-size: 1.2rem; margin-bottom: 1.5rem;">Đó là về việc trở thành chính xác con người bạn — phức tạp, sâu sắc, biểu cảm — và để phong cách của bạn nói trước.</p>
+                        <p style="font-size: 1.1rem;">Dành cho mọi người đã bị hiểu lầm vì họ khôn ngoan quá sớm hoặc táo bạo quá trẻ — đây là thương hiệu của bạn.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        // Add print functionality
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && e.key === 'p') {
+                e.preventDefault();
+                window.print();
+            }
+        });
+        
+        // Add navigation
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowRight' && currentSlide < slides.length - 1) {
+                currentSlide++;
+                slides[currentSlide].scrollIntoView({ behavior: 'smooth' });
+            } else if (e.key === 'ArrowLeft' && currentSlide > 0) {
+                currentSlide--;
+                slides[currentSlide].scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    </script>
+</body>
+</html>
